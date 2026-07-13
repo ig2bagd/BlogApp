@@ -1,0 +1,33 @@
+﻿
+@rendermode InteractiveServer
+
+@inject IBlogRepository blogRepository
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand">Blogging Demo App</a>
+    </div>
+</div>
+
+<div class="content-container px-3">
+    <ul class="nav flex-column">
+        @foreach (var post in blogPosts!)
+        {
+            <li class="nav-item">
+                <NavLink class="nav-link" href="@($"/post/{post.Id}")">
+                    @post.Title
+                </NavLink>
+            </li>
+        }
+    </ul>
+    <button class="btn btn-primary" @onclick="AddNewPost">Add New Post</button>
+</div>
+
+@code {
+    // [CascadingParameter]
+    private List<BlogPost>? blogPosts;
+
+    protected override async Task OnParametersSetAsync() => blogPosts = await blogRepository.GetPosts();
+
+    private void AddNewPost() => blogRepository.AddPost("New post", "This is a new blog post").Wait();
+}

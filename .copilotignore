@@ -1,0 +1,48 @@
+# =========================================================================
+# GitHub Copilot Exclusion List for .NET Projects
+# =========================================================================
+
+# 1. Sensitive Data and Configurations
+# -------------------------------------------------------------------------
+# Prevent local secrets, connection strings, and tokens from being sent to the LLM
+web.config
+appsettings.json
+*.pem
+*.pfx
+*.cert
+*.secret
+.env
+.env.*
+
+# 2. Build and Binary Outputs
+# -------------------------------------------------------------------------
+# Ignore heavy, auto-generated binaries that pollute context paths
+[Bb]in/
+[Oo]bj/
+*.msi
+*.exe
+*.dll
+*.pdb
+*.suo
+
+# 3. Local Development & User-Specific Settings
+# -------------------------------------------------------------------------
+# Ignore IDE-specific cache and user-override preferences
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# 4. Dependency & Package Directories
+# -------------------------------------------------------------------------
+# No need for Copilot to index raw package source code cache
+.nuget/
+packages/
+
+# 5. Entity Framework Core / Database Artifacts
+# -------------------------------------------------------------------------
+# Exclude local database files and heavy raw SQL migration scripts if necessary
+*.mdf
+*.ldf
+*.db
+*.sqlite

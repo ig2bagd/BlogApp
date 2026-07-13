@@ -1,0 +1,22 @@
+﻿@page "/post/{PostId:int}"
+
+@inject IBlogRepository blogRepository
+
+@if(post is not null)
+{
+    <h2>@post.Title</h2>
+    <p>@post.Content</p>
+}
+else
+{
+    <p>Post not found.</p>
+}
+
+@code {
+    [Parameter]
+    public int PostId { get; set; }
+
+    private BlogPost? post;
+
+    protected override async Task OnInitializedAsync() => post = await blogRepository.GetPost(PostId);
+}
