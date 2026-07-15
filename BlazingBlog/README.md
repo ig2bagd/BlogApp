@@ -55,26 +55,17 @@ B. Global Settings(apply to all repos):
 
 * `.github/copilot-instructions.md` *(Applies repository-wide to all chats and inline completions)*
 
-
-
 **2. Path-Specific Instructions**
 
-* `.github/instructions/<folder-or-feature-name>.instructions.md` *(Targeted rules linked to specific directories, scopes, or projects)*
+* `.github/instructions/<name>.instructions.md` *(Targeted rules linked to specific directories, scopes, or projects)*
 
 **3. Agent Skills**
 
 * `.github/skills/<skill-name>/SKILL.md` *(Defines executable CLI tools, local scripts, or external API hooks the agent can leverage)*
 
-
 **4. Custom Agents**
 
 * `.github/agents/<agent-name>.agent.md` *(Markdown-based definition establishing the agent persona, specialized system prompts, and referenced skills)*
-
-
-**5. Additional Repository Configurations**
-
-* `.copilotignore` *(Uses standard `.gitignore` match rules to strictly prevent sensitive files or massive build directories from indexing into the LLM context)*
-
 
 ---
 
@@ -86,7 +77,7 @@ B. Global Settings(apply to all repos):
 
 **2. Path-Specific Instructions**
 
-* `%USERPROFILE%\.github\instructions\global.instructions.md` *(Global defaults targeting universal sub-folder patterns, like standard test or mock directory formats)*
+* `%USERPROFILE%\.github\instructions\<name>.instructions.md` *(Global defaults targeting universal sub-folder patterns, like standard test or mock directory formats)*
 
 **3. Agent Skills**
 
