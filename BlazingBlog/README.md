@@ -27,6 +27,11 @@ A. Repository-Level Settings
     └── 📁 agents/
         └── 📄 <agent-name>.agent.md    		<-- 4. Custom Agents
 
+│
+└── 📁 .agents/
+    └── 📁 skills/
+        └── 📁 <skill-name>/
+            └── 📄 SKILL.md         			<-- 3. Agent Skills #2
 
 B. Global Settings(apply to all repos):
 📁 %USERPROFILE%/
@@ -94,3 +99,7 @@ B. Global Settings(apply to all repos):
 > ⚠️ **Priority Rule:** Files explicitly declared in the **local repository** completely override or extend matching configuration scopes in the **global settings**. Local rules take precedence to maintain strict project-specific compliance.
 > 
 >
+
+### Resources:
+* https://github.com/github/awesome-copilot/
+* https://github.com/dotnet/skills
