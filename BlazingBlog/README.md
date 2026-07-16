@@ -25,13 +25,15 @@ A. Repository-Level Settings
     │       └── 📄 SKILL.md         			<-- 3. Agent Skills
     │
     └── 📁 agents/
-        └── 📄 <agent-name>.agent.md    		<-- 4. Custom Agents
-
+    │   └── 📄 <agent-name>.agent.md    		<-- 4. Custom Agents
+    │
+    └── 📁 prompts/
+        └── 📄 <prompt-name>.prompt.md    		<-- 5. Prompt Files
 │
 └── 📁 .agents/
     └── 📁 skills/
         └── 📁 <skill-name>/
-            └── 📄 SKILL.md         			<-- 3. Agent Skills #2
+            └── 📄 SKILL.md         			<-- 3. Agent Skills   # Method 2
 
 B. Global Settings(apply to all repos):
 📁 %USERPROFILE%/
@@ -60,6 +62,8 @@ B. Global Settings(apply to all repos):
 
 * `.github/copilot-instructions.md` *(Applies repository-wide to all chats and inline completions)*
 
+    Use the `/generateInstructions` command to create the file
+
 **2. Path-Specific Instructions**
 
 * `.github/instructions/<name>.instructions.md` *(Targeted rules linked to specific directories, scopes, or projects)*
@@ -71,6 +75,10 @@ B. Global Settings(apply to all repos):
 **4. Custom Agents**
 
 * `.github/agents/<agent-name>.agent.md` *(Markdown-based definition establishing the agent persona, specialized system prompts, and referenced skills)*
+
+**5. Prompt Files**
+
+* `.github/prompts/<prompt-name>.prompt.md` *(Reusable prompt files)*
 
 ---
 
