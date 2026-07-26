@@ -16,12 +16,12 @@ A. Repository-Level Settings
 │
 └── 📁 .github/
     └── copilot-instructions.md         		<-- 1. Custom Instructions
-	│
+    │
     └── 📁 instructions/
     │   └── 📄 <name>.instructions.md  			<-- 2. Path-Specific Instructions
-	│
+    │
     └── 📁 skills/
-	│	└── 📁 <skill-name>/
+    │	└── 📁 <skill-name>/
     │       └── 📄 SKILL.md         			<-- 3. Agent Skills
     │
     └── 📁 agents/
@@ -78,7 +78,9 @@ B. Global Settings(apply to all repos):
 
 **5. Prompt Files**
 
-* `.github/prompts/<prompt-name>.prompt.md` *(Reusable prompt files)*
+* `.github/prompts/<prompt-name>.prompt.md` *(Reusable prompt files for Copilot Chat)  
+  `/<prompt-name>` Loads a prompt file into the chat window for immediate use.  
+  `/savePrompt <name>` Saves the current chat context as a new prompt file for future reuse.
 
 ---
 
@@ -111,3 +113,7 @@ B. Global Settings(apply to all repos):
 ### Resources:
 * https://github.com/github/awesome-copilot/
 * https://github.com/dotnet/skills
+* skills.sh
+* github.com/agentskills/agentskills
+* github.com/anthropics/skills/
+* code.visualstudio.com/docs/copilot/customization/agent-skills
