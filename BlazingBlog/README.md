@@ -33,7 +33,6 @@ A. Repository-Level Settings
 
 B. Global Settings(apply to all repos):
 📁 %USERPROFILE%/
-│
 └── copilot-instructions.md              		<-- 1. Custom Instructions
 │
 ├── 📁 .copilot/
