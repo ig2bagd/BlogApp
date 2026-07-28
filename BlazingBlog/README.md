@@ -29,25 +29,20 @@ A. Repository-Level Settings
     │
     └── 📁 prompts/
         └── 📄 <prompt-name>.prompt.md    		<-- 5. Prompt Files
-│
-└── 📁 .agents/
-    └── 📁 skills/
-        └── 📁 <skill-name>/
-            └── 📄 SKILL.md         			<-- 3. Agent Skills   # Method 2
+
 
 B. Global Settings(apply to all repos):
 📁 %USERPROFILE%/
-│
 └── copilot-instructions.md              		<-- 1. Custom Instructions
 │
 ├── 📁 .copilot/
 │   └── 📁 instructions/
-│       └── 📄 <name>.instructions.md       	<-- 2. Path-Specific Instructions
+│       └── 📄 <name>.instructions.md       	        <-- 2. Path-Specific Instructions
 │
 └── 📁 .agents/
 │   └── 📁 skills/
-│		└── 📁 <skill-name>/
-│           └── 📄 SKILL.md                 	<-- 3. Agent Skills
+│	└── 📁 <skill-name>/
+│           └── 📄 SKILL.md                      	<-- 3. Agent Skills
 │						
 └── 📁 .github/						
     └── 📁 agents/
@@ -70,7 +65,8 @@ B. Global Settings(apply to all repos):
 
 **3. Agent Skills**
 
-* `.github/skills/<skill-name>/SKILL.md` *(Defines executable CLI tools, local scripts, or external API hooks the agent can leverage)*
+* `.github/skills/<skill-name>/SKILL.md` *(Defines executable CLI tools, local scripts, or external API hooks the agent can leverage)*  
+* Other discoverable folders: `.claude/skills/` & `.agents/skills/`
 
 **4. Custom Agents**
 
@@ -88,19 +84,20 @@ B. Global Settings(apply to all repos):
 
 **1. Custom Instructions**
 
-* `%USERPROFILE%\.github\copilot-instructions.md` *(Fallback rules applied universally across all individual repositories opened by the user)*
+* `~/.github/copilot-instructions.md` *(Fallback rules applied universally across all individual repositories opened by the user)*
 
 **2. Path-Specific Instructions**
 
-* `%USERPROFILE%\.github\instructions\<name>.instructions.md` *(Global defaults targeting universal sub-folder patterns, like standard test or mock directory formats)*
+* `~/.github/instructions/<name>.instructions.md` *(Global defaults targeting universal sub-folder patterns, like standard test or mock directory formats)*
 
 **3. Agent Skills**
 
-* `%USERPROFILE%\.agent\skills\<skill-name>\SKILL.md` *(User-level tools available for execution across any repository workspace)*
+* `~/.agents/skills/<skill-name>/SKILL.md` *(User-level tools available for execution across any repository workspace)*  
+* Other discoverable folders: `~/.claude/skills/` & `~/.agents/skills/`
 
 **4. Custom Agents**
 
-* `%USERPROFILE%\.github\agents\<agent-name>.agent.md` *(Global system-wide custom agents accessible via `@agentname` in the Visual Studio Chat window)*
+* `~/.github/agents/<agent-name>.agent.md` *(Global system-wide custom agents accessible via `@agentname` in the Visual Studio Chat window)*
 
 
 
@@ -116,4 +113,4 @@ B. Global Settings(apply to all repos):
 * skills.sh
 * github.com/agentskills/agentskills
 * github.com/anthropics/skills/
-* code.visualstudio.com/docs/copilot/customization/agent-skills
+
