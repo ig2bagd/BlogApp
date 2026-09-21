@@ -38,9 +38,8 @@ B. Global Settings(apply to all repos):
 │
 ├── 📁 .copilot/
 │   └── 📁 instructions/
-│       └── 📄 <name>.instructions.md           <-- 2. Path-Specific Instructions
-│
-└── 📁 .agents/
+│   │   └── 📄 <name>.instructions.md           <-- 2. Path-Specific Instructions
+│   │
 │   └── 📁 skills/
 │	    └── 📁 <skill-name>/
 │           └── 📄 SKILL.md                     <-- 3. Agent Skills
