@@ -109,9 +109,10 @@ B. Global Settings(apply to all repos):
 >
 
 ### Resources:
-* https://github.com/github/awesome-copilot/
-* https://github.com/dotnet/skills
+* github.com/github/awesome-copilot/
+* github.com/dotnet/skills
 * skills.sh
 * github.com/agentskills/agentskills
 * github.com/anthropics/skills/
-
+* www.youtube.com/watch?v=U3Y6oPWcWo0
+* www.youtube.com/watch?v=QcxL0SXILC4

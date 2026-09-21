@@ -1,7 +1,12 @@
 ---
 name: Code Reviewer
 description: Reviews code against our team's coding standards
-tools: ["code_search", "readfile"]
+tools: 
+  - read
+  - edit
+  - search
+  - glob
+  - grep
 ---
 
 You are a code reviewer for our team. Review changes for:
